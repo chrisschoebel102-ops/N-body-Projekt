@@ -73,7 +73,7 @@ def gravity_kernel(pos, masses, acc, G, eps2):
     s_mass = cuda.shared.array((128,),   dtype=float32)
 ```
 
-`cuda.shared.array` reserviert Speicher direkt auf dem **Streaming Multiprocessor (SM)** dem Chip-Die der GPU, nicht im langsamen DRAM. Dieser Speicher ist pro Block privat: Block 0 und Block 1 haben je ihr eigenes `s_pos`, sie teilen ihn nicht.
+`cuda.shared.array` reserviert Speicher direkt auf dem **Streaming Multiprocessor (SM)** nicht im DRAM. Dieser Speicher ist pro Block privat: Block 0 und Block 1 haben je ihr eigenes `s_pos`, sie teilen ihn nicht.
 
 ---
 
