@@ -38,7 +38,7 @@ TILE    = THREADS
 r² = dx² + dy² + ε²
 ```
 
-`THREADS = 128` pro Block ist auf die Warp-Größe von Nvidia-GPUs abgestimmt (ein Warp = 32 Threads, 128 = 4 Warps). Für 25000 Teilchen snd das 196 Blöcke × 128 Threads = 25.088 die überschüssigen 88 Threads werden per `if i < n` abgefangen.
+`THREADS = 128` pro Block ist auf die Warp-Größe von Nvidia-GPUs abgestimmt (ein Warp = 32 Threads, 128 = 4 Warps). Für 25000 Teilchen sind das 196 Blöcke × 128 Threads = 25.088 die überschüssigen 88 Threads werden per `if i < n` abgefangen.
 
 ---
 
