@@ -1,5 +1,6 @@
 N-Body Gravity Simulation mit Numba CUDA
 ---
+## Chris Schöbel 98131
 
 ## Vorschau
 
